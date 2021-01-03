@@ -86,6 +86,24 @@ git branch -M main
 git push -u origin main
 ```
 
+## Migrating to Hugo
+
+Hugo supports importing content from Jekyll and automatically converts content from the Jekyll format to the format that Hugo understands.
+
+You can use `hugo import jekyll <source jekyll folder> <target hugo folder>` command to import content from Jekyll into a Hugo website.
+
+This command does not provide synchronization and is meant for a one time import.
+
+## Adding a theme
+
+If you plan to use a theme created by someone else, there may be no need to learn the Go template language to use Hugo.
+
+There multiple ways to get a theme:
+
+1. Use Hugo Modules to integrate the theme
+2. Use git sub-modules to have a reference to the theme in the themes folder
+3. Download and copy the theme to the themes folder
+
 ## Usage <a name = "usage"></a>
 
 - How to use...
