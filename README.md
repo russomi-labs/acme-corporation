@@ -104,6 +104,69 @@ There multiple ways to get a theme:
 2. Use git sub-modules to have a reference to the theme in the themes folder
 3. Download and copy the theme to the themes folder
 
+Configure the theme in `config.yaml` :
+
+``` yaml
+baseURL: http://example.org/
+languageCode: en-us
+title: My New Hugo Site
+theme: Eclectic
+```
+
+This tells Hugo to look for a folder named `Eclectic` in the `themes` folder and load the theme from that folder.
+
+## Running the dev server
+
+You can run our Acme website in development mode using the command `hugo server` .
+
+This hosts the hugo based website locally (at <http://localhost:1313/>) and automatically rebuilds it as the content changes and the changes we do in the theme as well as in the content update in near realtime in the browser.
+
+``` bash
+# Run the development server locally
+hugo server
+```
+
+## Adding content
+
+These changes provide the information to fill up the menus, the footer, copyright notices as well as the title and author information as per the requirements of the theme eclectic for Acme Corporation.
+
+``` yaml
+baseURL: <Your URL Here>                      # Hosting location.
+languageCode: en-us                           # Locale
+title: Acme Corporation                       # Name of the website
+theme: Eclectic                               # Name of the theme
+author:                                       # Information about the website author
+  facebook: "https://facebook.com/example"
+  twitter: "https://twitter.com/example"
+  email: "contact@example.org"
+  name: "Acme Corporation"
+  location: New York
+  phone: (999) 999-9999
+  hours: "**Mon-Fri:** 9:00AM - 6:00PM, ET"
+
+menu:                                         # Menu placement
+  main:                                       #    - Name of the menu
+    - identifier: about                       #       - Identifier
+      name: About                             #       - Display name (theme specific key)
+      url: /about                             #       - Target URL
+      weight: 1                               #       - Sorting order
+    - identifier: contact
+      name: Contact
+      url: /contact
+      weight: 2
+params:                                       # Theme specific parameters
+  color: "#71B180"
+  copyright: "Copyright &copy; 2020 Acme Corporation. All Rights Reserved."
+  footer:
+    - title: About
+      content: Acme Corporation is the world's leading manufacturer of digital shapes. From squares and circles to triangles and hexagons, we have it all. Browse through our collection of various forms with different thickness and line styles. We shape the world. You live in it.
+    - title: Recent Blog Posts
+      recents: blog
+      recentCount: 7
+    - title: Contact Us
+      contact: true
+```
+
 ## Usage <a name = "usage"></a>
 
 - How to use...
