@@ -33,14 +33,14 @@ A step by step series of examples that tell you how to get a development env run
 Say what the step will be
 
 ``` bash
-# Create a site skeleton with yaml
+# Create a site skeleton with yaml.
 hugo new site acme-corporation --format yaml
 
 # Create an empty GitHub repository.
 git init .
 
 # Add files that were just created using the Hugo command line.
-git add *
+git add --all
 
 # Check-in those files to version control with a commit message.
 git commit -m "Create website skeleton"
@@ -51,7 +51,7 @@ git remote add origin https://github.com/russomi-labs/acme-corporation.git
 # Move the current branch to "main" -M Shortcut for --move --force.
 git branch -M main
 
-# git push adding upstream tracking branch at origin main
+# git push adding upstream tracking branch at origin main.
 git push -u origin main
 ```
 
