@@ -7,9 +7,9 @@
 - [Usage](#usage)
 - [Contributing](../CONTRIBUTING.md)
 
-## 📖 About <a name = "about"></a>
+## About <a name = "about"></a>
 
-[Hugo in Action](https://github.com/hugoinaction/hugoinaction) teaches you to build and host your own fully customizable static website with the Hugo engine.
+📖 [Hugo in Action](https://github.com/hugoinaction/hugoinaction) teaches you to build and host your own fully customizable static website with the Hugo engine.
 
 > A basic website for a company named Acme Corporation. Acme Corporation is a leading manufacturer of shapes like lines, circles, squares and triangle in digital form in the planet. We will be using an existing Hugo theme and start with understanding how to add content to a Hugo website.
 
@@ -23,7 +23,10 @@ What things you need to install the software and how to install them.
 
 ``` bash
 # Install Hugo
+brew install hugo
 
+# Install Tree
+brew install tree
 ```
 
 ### Installing
@@ -32,7 +35,7 @@ A step by step series of examples that tell you how to get a development env run
 
 Say what the step will be
 
-``` bash
+``` shell
 # Create a site skeleton with yaml.
 hugo new site acme-corporation --format yaml
 
@@ -65,4 +68,25 @@ End with an example of getting some data out of the system or using it for a lit
 
 ## Usage <a name = "usage"></a>
 
-Add notes about how to use the system.
+The skelton has the following directory structure.
+
+``` bash
+❯ tree -C
+.
+├── CONTRIBUTING.md
+├── README.md
+├── archetypes
+│   └── default.md
+├── config.yaml
+├── content
+├── data
+├── layouts
+├── static
+└── themes
+
+6 directories, 4 files
+```
+
+## Resources
+
+- [Compose 404](https://codepen.io/imathis/pen/ZYMmLx)
