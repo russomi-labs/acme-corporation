@@ -63,7 +63,7 @@ A step by step series of examples that tell you how to get a development env run
 
 Say what the step will be
 
-``` shell
+``` bash
 # Create a site skeleton with yaml.
 hugo new site acme-corporation --format yaml
 
@@ -86,17 +86,9 @@ git branch -M main
 git push -u origin main
 ```
 
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo.
-
 ## Usage <a name = "usage"></a>
 
-TODO
+- How to use...
 
 ## Resources
 
