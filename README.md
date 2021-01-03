@@ -1,15 +1,17 @@
 # acme-corporation
 
+A basic website for a company named Acme Corporation.
+
 ## Table of Contents
 
 - [About](#about)
 - [Getting Started](#getting_started)
 - [Usage](#usage)
-- [Contributing](../CONTRIBUTING.md)
+- [Contributing](CONTRIBUTING.md)
 
 ## About <a name = "about"></a>
 
-📖 [Hugo in Action](https://github.com/hugoinaction/hugoinaction) teaches you to build and host your own fully customizable static website with the Hugo engine.
+📖 [Hugo in Action](https://www.manning.com/books/hugo-in-action) teaches you to build and host your own fully customizable static website with the Hugo engine.
 
 > A basic website for a company named Acme Corporation. Acme Corporation is a leading manufacturer of shapes like lines, circles, squares and triangle in digital form in the planet. We will be using an existing Hugo theme and start with understanding how to add content to a Hugo website.
 
@@ -43,11 +45,12 @@ The various parts of a Hugo website consist of:
 
 ## Getting Started <a name = "getting_started"></a>
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See [deployment](#deployment) for notes on how to deploy the project on a live system.
-
 ### Prerequisites
 
-What things you need to install the software and how to install them.
+- git
+- GitHub Account
+
+### Installing
 
 ``` bash
 # Install Hugo
@@ -57,11 +60,7 @@ brew install hugo
 brew install tree
 ```
 
-### Installing
-
-A step by step series of examples that tell you how to get a development env running.
-
-Say what the step will be
+## Usage <a name = "usage"></a>
 
 ``` bash
 # Create a site skeleton with yaml.
@@ -86,7 +85,7 @@ git branch -M main
 git push -u origin main
 ```
 
-## Migrating to Hugo
+### Migrating to Hugo
 
 Hugo supports importing content from Jekyll and automatically converts content from the Jekyll format to the format that Hugo understands.
 
@@ -94,9 +93,7 @@ You can use `hugo import jekyll <source jekyll folder> <target hugo folder>` com
 
 This command does not provide synchronization and is meant for a one time import.
 
-## Adding a theme
-
-If you plan to use a theme created by someone else, there may be no need to learn the Go template language to use Hugo.
+### Adding a theme
 
 There multiple ways to get a theme:
 
@@ -115,7 +112,7 @@ theme: Eclectic
 
 This tells Hugo to look for a folder named `Eclectic` in the `themes` folder and load the theme from that folder.
 
-## Running the dev server
+### Running the dev server
 
 You can run our Acme website in development mode using the command `hugo server` .
 
@@ -128,49 +125,30 @@ hugo server
 
 ## Adding content
 
-These changes provide the information to fill up the menus, the footer, copyright notices as well as the title and author information as per the requirements of the theme eclectic for Acme Corporation.
+### Configuration
 
-``` yaml
-baseURL: <Your URL Here>                      # Hosting location.
-languageCode: en-us                           # Locale
-title: Acme Corporation                       # Name of the website
-theme: Eclectic                               # Name of the theme
-author:                                       # Information about the website author
-  facebook: "https://facebook.com/example"
-  twitter: "https://twitter.com/example"
-  email: "contact@example.org"
-  name: "Acme Corporation"
-  location: New York
-  phone: (999) 999-9999
-  hours: "**Mon-Fri:** 9:00AM - 6:00PM, ET"
+- [config.yaml](config.yaml) - These changes provide the information to fill up the menus, the footer, copyright notices as well as the title and author information as per the requirements of the theme eclectic for Acme Corporation.
 
-menu:                                         # Menu placement
-  main:                                       #    - Name of the menu
-    - identifier: about                       #       - Identifier
-      name: About                             #       - Display name (theme specific key)
-      url: /about                             #       - Target URL
-      weight: 1                               #       - Sorting order
-    - identifier: contact
-      name: Contact
-      url: /contact
-      weight: 2
-params:                                       # Theme specific parameters
-  color: "#71B180"
-  copyright: "Copyright &copy; 2020 Acme Corporation. All Rights Reserved."
-  footer:
-    - title: About
-      content: Acme Corporation is the world's leading manufacturer of digital shapes. From squares and circles to triangles and hexagons, we have it all. Browse through our collection of various forms with different thickness and line styles. We shape the world. You live in it.
-    - title: Recent Blog Posts
-      recents: blog
-      recentCount: 7
-    - title: Contact Us
-      contact: true
-```
+### Content Pages
 
-## Usage <a name = "usage"></a>
+- Content pages can be created as text/markup files in the content folder.
 
-- How to use...
+### Index Page
+
+- The index page, also called the home or the landing page is a special page in most websites whose content is unique and different from all other pages.
+- Hugo provides a special template for the index page called the index template.
+
+> We can override templates in a Hugo theme by placing a html template file in the layouts folder. Doing that provides someone who understands HTML a quick way to customize a website without learning Hugo. The custom HTML can be very specific to a particular website but until we use Hugo's template language, we have to be very careful with the HTML we are writing as the custom HTMl page does not change automatically when the content it links to changes. - [Hugo in Action - Chapter 2](https://livebook.manning.com/book/hugo-in-action/chapter-2/v-7/point-9294-88-88-0)
+
+## Continuous Delivery
+
+The simplicity of Netlify and GitHub Pages is best approach to get started with learning Hugo.
+
+### Netlify
+
+### GitHub Pages
 
 ## Resources
 
+- [Hugo in Action](https://www.manning.com/books/hugo-in-action) - Static sites and dynamic Jamstack apps
 - [Compose 404](https://codepen.io/imathis/pen/ZYMmLx)
