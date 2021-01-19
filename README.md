@@ -224,6 +224,12 @@ Key Features
 
 Join GitHub: <https://github.com/join>
 
+### Setup
+
+- Add GitHub actions file to tell GitHub what actions need to be taken <https://github.com/marketplace/actions/hugo-setup>
+- Update GitHub settings for the repository and enable GitHub pages from the gh-pages branch.  Note the URL of the GitHub Pages website.
+- Fix the base URL in the GitHub actions file and push again.
+
 ## Resources
 
 - [Hugo in Action](https://www.manning.com/books/hugo-in-action) - Static sites and dynamic Jamstack apps
